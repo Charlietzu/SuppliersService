@@ -8,13 +8,40 @@
     ".NETCoreApp,Version=v3.1": {
       "SuppliersService.Data/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "Microsoft.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",
+          "Microsoft.EntityFrameworkCore.Tools": "3.1.4",
           "SuppliersService.Business": "1.0.0"
         },
         "runtime": {
           "SuppliersService.Data.dll": {}
+        }
+      },
+      "AutoMapper/10.1.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.1.1.0"
+          }
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.1": {
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4",
+          "Microsoft.Extensions.Options": "3.1.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.1.0"
+          }
         }
       },
       "FluentValidation/8.6.2": {
@@ -44,7 +71,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.SqlClient/1.0.19269.1": {
         "dependencies": {
           "Microsoft.Identity.Client": "3.0.8",
@@ -105,6 +132,18 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/3.1.4": {},
+      "Microsoft.EntityFrameworkCore.Design/3.1.4": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21503"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/3.1.4": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.4"
@@ -126,6 +165,11 @@
             "assemblyVersion": "3.1.4.0",
             "fileVersion": "3.100.420.21503"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/3.1.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "3.1.4"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/3.1.4": {
@@ -249,7 +293,7 @@
       },
       "Microsoft.Identity.Client/3.0.8": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
           "System.Runtime.Serialization.Formatters": "4.3.0",
@@ -552,15 +596,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Emit/4.3.0": {
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
+      "System.Reflection.Emit/4.7.0": {},
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "dependencies": {
           "System.Reflection": "4.3.0",
@@ -848,7 +884,7 @@
           "System.IO": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Reflection": "4.3.0",
-          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit": "4.7.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
@@ -878,6 +914,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/10.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "path": "automapper/10.1.1",
+      "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xSWoVzOipuDU4PeZcUfaZQ+xqXU8QmGv5jrdlxt3MYm9xaOmrefqcfzGQ3SQ+D+8wfBa/ZwSuL0qKOVj080inA==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/8.1.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512"
+    },
     "FluentValidation/8.6.2": {
       "type": "package",
       "serviceable": true,
@@ -899,12 +949,12 @@
       "path": "microsoft.bcl.hashcode/1.1.0",
       "hashPath": "microsoft.bcl.hashcode.1.1.0.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.5.0": {
+    "Microsoft.CSharp/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient/1.0.19269.1": {
       "type": "package",
@@ -934,6 +984,13 @@
       "path": "microsoft.entityframeworkcore.analyzers/3.1.4",
       "hashPath": "microsoft.entityframeworkcore.analyzers.3.1.4.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Design/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vfY9sV3zJW/kwV9VBXAQlj5rky+bEI217WfurB8fct8YkQCtl+L5MCr0ej2NUOs/rpQyYsAocKU2379AyMtbVQ==",
+      "path": "microsoft.entityframeworkcore.design/3.1.4",
+      "hashPath": "microsoft.entityframeworkcore.design.3.1.4.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/3.1.4": {
       "type": "package",
       "serviceable": true,
@@ -947,6 +1004,13 @@
       "sha512": "sha512-PV37RQnLxwUFJBDggmtgfxbPsxZ7Iv/fyxWEP9a8xV/S8WZ+/Zo5jpfaQMcnVrHljuD9R3YJy+YFbFuicq0UjQ==",
       "path": "microsoft.entityframeworkcore.sqlserver/3.1.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.3.1.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aJ1TGflH7aFOh+oPppIzx7NoC8QXw6lY4YH8PAa67tTlh40GJvWbhkNVqDCyuzrvUl9U1I3i4so/N6TtCK11uw==",
+      "path": "microsoft.entityframeworkcore.tools/3.1.4",
+      "hashPath": "microsoft.entityframeworkcore.tools.3.1.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/3.1.4": {
       "type": "package",
@@ -1256,12 +1320,12 @@
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit/4.3.0": {
+    "System.Reflection.Emit/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
-      "path": "system.reflection.emit/4.3.0",
-      "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "type": "package",

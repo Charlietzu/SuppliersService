@@ -22,3 +22,6 @@ C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Data\obj\
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Data\obj\Debug\netcoreapp3.1\SuppliersService.Data.csproj.CopyComplete
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Data\obj\Debug\netcoreapp3.1\SuppliersService.Data.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Data\obj\Debug\netcoreapp3.1\SuppliersService.Data.pdb
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Data\bin\Debug\netcoreapp3.1\SuppliersService.Data.runtimeconfig.json
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Data\bin\Debug\netcoreapp3.1\SuppliersService.Data.runtimeconfig.dev.json
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Data\obj\Debug\netcoreapp3.1\SuppliersService.Data.genruntimeconfig.cache

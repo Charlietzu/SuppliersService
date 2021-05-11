@@ -46,3 +46,6 @@ C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\D
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\Debug\net5.0\ref\SuppliersService.Api.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\Debug\net5.0\SuppliersService.Api.pdb
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\Debug\net5.0\SuppliersService.Api.genruntimeconfig.cache
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
