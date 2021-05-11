@@ -1,0 +1,16 @@
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.deps.json
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.dll
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.pdb
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.AssemblyInfoInputs.cache
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.AssemblyInfo.cs
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csproj.CoreCompileInputs.cache
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.dll
+C:\Users\Caio\Downloads\devIO\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.pdb
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.deps.json
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.pdb
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.AssemblyInfoInputs.cache
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.AssemblyInfo.cs
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csproj.CoreCompileInputs.cache
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.pdb

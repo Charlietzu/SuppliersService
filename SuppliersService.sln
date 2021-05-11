@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIO.Business", "..\..\..\Downloads\DevIO.ASPNET.MVC.Core-master\DevIO.ASPNET.MVC.Core-master\src\DevIO.Business\DevIO.Business.csproj", "{7D1AD46C-C418-4C94-9E59-09B2CA9A0C83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuppliersService.Data", "src\SuppliersService.Data\SuppliersService.Data.csproj", "{5672C769-6FE7-4B27-A70B-2FA3539ECF57}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIO.Data", "..\..\..\Downloads\DevIO.ASPNET.MVC.Core-master\DevIO.ASPNET.MVC.Core-master\src\DevIO.Data\DevIO.Data.csproj", "{F6CC13B2-D3D9-4C3A-A95F-8F13F01CFC4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuppliersService.Business", "src\SuppliersService.Business\SuppliersService.Business.csproj", "{6414C8FF-4259-4574-917D-15792DBEAB0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuppliersService.Api", "src\SuppliersService.Api\SuppliersService.Api.csproj", "{D55ABAC4-CF3B-422A-8C32-5BC5CD7A0EC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7D1AD46C-C418-4C94-9E59-09B2CA9A0C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D1AD46C-C418-4C94-9E59-09B2CA9A0C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D1AD46C-C418-4C94-9E59-09B2CA9A0C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D1AD46C-C418-4C94-9E59-09B2CA9A0C83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6CC13B2-D3D9-4C3A-A95F-8F13F01CFC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6CC13B2-D3D9-4C3A-A95F-8F13F01CFC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6CC13B2-D3D9-4C3A-A95F-8F13F01CFC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6CC13B2-D3D9-4C3A-A95F-8F13F01CFC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5672C769-6FE7-4B27-A70B-2FA3539ECF57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5672C769-6FE7-4B27-A70B-2FA3539ECF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5672C769-6FE7-4B27-A70B-2FA3539ECF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5672C769-6FE7-4B27-A70B-2FA3539ECF57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6414C8FF-4259-4574-917D-15792DBEAB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6414C8FF-4259-4574-917D-15792DBEAB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6414C8FF-4259-4574-917D-15792DBEAB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6414C8FF-4259-4574-917D-15792DBEAB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D55ABAC4-CF3B-422A-8C32-5BC5CD7A0EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D55ABAC4-CF3B-422A-8C32-5BC5CD7A0EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D55ABAC4-CF3B-422A-8C32-5BC5CD7A0EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D55ABAC4-CF3B-422A-8C32-5BC5CD7A0EC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
