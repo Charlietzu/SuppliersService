@@ -37,7 +37,7 @@ namespace SuppliersService.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
-            builder.ToTable("Address");
+            builder.ToTable("Addresses");
         }
     }
 }
