@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "ab2e1b2f-2196-4686-be3e-b1d9a770fbe4",
+		"name": "SuppliersService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Suppliers Controller",
+			"item": [
+				{
+					"name": "Get All Suppliers (Excluding Addresses)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/api/suppliers",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Supplier By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/api/suppliers/9c3c145d-c20c-46ff-b3f2-8742373417c5",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"suppliers",
+								"9c3c145d-c20c-46ff-b3f2-8742373417c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"9c3c145d-c20c-46ff-b3f2-8742373417c5\",\r\n  \"name\": \"Tech House\",\r\n  \"document\": \"13568987694\",\r\n  \"supplierType\": 1,\r\n  \"address\": {\r\n    \"id\": \"beb21cf5-2b46-4c2f-94e7-002e1b7b29aa\",\r\n    \"publicArea\": \"ewewewe\",\r\n    \"number\": \"ewewewe\",\r\n    \"complement\": \"ewewewe\",\r\n    \"postalCode\": \"34476899\",\r\n    \"district\": \"ewewewe\",\r\n    \"city\": \"ewewewe\",\r\n    \"state\": \"ewewewe\",\r\n    \"supplierId\": \"9c3c145d-c20c-46ff-b3f2-8742373417c5\"\r\n},\r\n  \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/api/suppliers",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/api/suppliers/9c3c145d-c20c-46ff-b3f2-8742373417c5",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"suppliers",
+								"9c3c145d-c20c-46ff-b3f2-8742373417c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Supplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"9c3c145d-c20c-46ff-b3f2-8742373417c5\",\r\n  \"name\": \"Tech House\",\r\n  \"document\": \"95701862089\",\r\n  \"supplierType\": 1,\r\n  \"address\": {\r\n    \"id\": \"beb21cf5-2b46-4c2f-94e7-002e1b7b29aa\",\r\n    \"publicArea\": \"null\",\r\n    \"number\": \"null\",\r\n    \"complement\": \"null\",\r\n    \"postalCode\": \"null\",\r\n    \"district\": \"null\",\r\n    \"city\": \"null\",\r\n    \"state\": \"null\",\r\n    \"supplierId\": \"9c3c145d-c20c-46ff-b3f2-8742373417c5\"\r\n},\r\n  \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/api/suppliers/9c3c145d-c20c-46ff-b3f2-8742373417c5",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"suppliers",
+								"9c3c145d-c20c-46ff-b3f2-8742373417c5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Addresses Controller",
+			"item": [
+				{
+					"name": "Get Address By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/api/addresses/beb21cf5-2b46-4c2f-94e7-002e1b7b29aa",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"addresses",
+								"beb21cf5-2b46-4c2f-94e7-002e1b7b29aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"beb21cf5-2b46-4c2f-94e7-002e1b7b29aa\",\r\n    \"publicArea\": \"ewewewe\",\r\n    \"number\": \"ewewewe\",\r\n    \"complement\": \"teste\",\r\n    \"postalCode\": \"34476899\",\r\n    \"district\": \"palmares\",\r\n    \"city\": \"ewewewe\",\r\n    \"state\": \"ewewewe\",\r\n    \"supplierId\": \"9c3c145d-c20c-46ff-b3f2-8742373417c5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/api/addresses/beb21cf5-2b46-4c2f-94e7-002e1b7b29aa",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"addresses",
+								"beb21cf5-2b46-4c2f-94e7-002e1b7b29aa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
