@@ -1,5 +1,4 @@
-﻿using SuppliersService.Api.ViewModels.DataAnnotations;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace SuppliersService.Api.ViewModels
@@ -8,29 +7,29 @@ namespace SuppliersService.Api.ViewModels
     {
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(200, ErrorMessage = ErrorMessages.FieldMustBeBetween, MinimumLength = 2)]
+        [Required(ErrorMessage = "The field {0} is required")]
+        [StringLength(200, ErrorMessage = "The field {0} must be between {2} and {1} characters", MinimumLength = 2)]
         public string PublicArea { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(50, ErrorMessage = ErrorMessages.FieldMustBeBetween, MinimumLength = 1)]
+        [Required(ErrorMessage = "The field {0} is required")]
+        [StringLength(50, ErrorMessage = "The field {0} must be between {2} and {1} characters", MinimumLength = 1)]
         public string Number { get; set; }
         public string Complement { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(8, ErrorMessage = ErrorMessages.FieldMustBe, MinimumLength = 8)]
+        [Required(ErrorMessage = "The field {0} is required")]
+        [StringLength(8, ErrorMessage = "The field {0} must be {1} characters", MinimumLength = 8)]
         public string PostalCode { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(100, ErrorMessage = ErrorMessages.FieldMustBeBetween, MinimumLength = 2)]
+        [Required(ErrorMessage = "The field {0} is required")]
+        [StringLength(100, ErrorMessage = "The field {0} must be between {2} and {1} characters", MinimumLength = 2)]
         public string District { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(100, ErrorMessage = ErrorMessages.FieldMustBeBetween, MinimumLength = 2)]
+        [Required(ErrorMessage = "The field {0} is required")]
+        [StringLength(100, ErrorMessage = "The field {0} must be between {2} and {1} characters", MinimumLength = 2)]
         public string City { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(50, ErrorMessage = ErrorMessages.FieldMustBeBetween, MinimumLength = 2)]
+        [Required(ErrorMessage = "The field {0} is required")]
+        [StringLength(50, ErrorMessage = "The field {0} must be between {2} and {1} characters", MinimumLength = 2)]
         public string State { get; set; }
         public Guid SupplierId { get; set; }
     }

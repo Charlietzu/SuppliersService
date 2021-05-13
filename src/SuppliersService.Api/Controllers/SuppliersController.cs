@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace SuppliersService.Api.Controllers
 {
     [Route("api/[controller]")]
+    [ApiController]
     public class SuppliersController : MainController
     {
         private readonly ISupplierRepository _supplierRepository;
@@ -18,7 +19,8 @@ namespace SuppliersService.Api.Controllers
 
         public SuppliersController(ISupplierRepository supplierRepository,
                                    ISupplierService supplierService,
-                                   IMapper mapper)
+                                   IMapper mapper,
+                                   INotificator notificator) : base(notificator)
         {
             _supplierRepository = supplierRepository;
             _supplierService = supplierService;
@@ -35,54 +37,49 @@ namespace SuppliersService.Api.Controllers
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<SupplierViewModel>> GetById(Guid id)
         {
-            SupplierViewModel supplier = _mapper.Map<SupplierViewModel>(await _supplierRepository.GetSupplierProductsAddress(id));
+            SupplierViewModel supplierViewModel = _mapper.Map<SupplierViewModel>(await _supplierRepository.GetSupplierProductsAddress(id));
 
-            if (supplier == null) return NotFound();
+            if (supplierViewModel == null) return NotFound();
 
-            return Ok(supplier);
+            return Ok(supplierViewModel);
         }
 
         [HttpPost]
         public async Task<ActionResult<SupplierViewModel>> Create(SupplierViewModel supplierViewModel)
         {
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            Supplier supplier = _mapper.Map<Supplier>(supplierViewModel);
+            await _supplierService.Create(_mapper.Map<Supplier>(supplierViewModel));
 
-            bool result = await _supplierService.Create(supplier);
-
-            if (!result) return BadRequest();
-
-            return Ok(supplier);
+            //Here i am not passing our <Supplier> supplier object to prevent our Business layer exposion
+            return CustomResponse(supplierViewModel);
         }
 
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<SupplierViewModel>> Update(Guid id, SupplierViewModel supplierViewModel)
         {
-            if (id != supplierViewModel.Id || !ModelState.IsValid) return BadRequest();
+            if (id != supplierViewModel.Id) return BadRequest();
 
-            Supplier supplier = _mapper.Map<Supplier>(supplierViewModel);
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            bool result = await _supplierService.Update(supplier);
+            await _supplierService.Update(_mapper.Map<Supplier>(supplierViewModel));
 
-            if (!result) return BadRequest();
-
-            return Ok(supplier);
+            return CustomResponse(ModelState);
         }
 
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<SupplierViewModel>> Delete(Guid id)
         {
-            SupplierViewModel supplier = _mapper.Map<SupplierViewModel>(await _supplierRepository.GetSupplierAddress(id));
+            SupplierViewModel supplierViewModel = _mapper.Map<SupplierViewModel>(await _supplierRepository.GetSupplierAddress(id));
 
-            if (supplier == null) return NotFound();
+            if (supplierViewModel == null) return NotFound();
 
-            bool result = await _supplierService.Delete(id);
+            await _supplierService.Delete(id);
 
-            if (!result) return BadRequest();
-
-            return Ok(supplier);
+            return CustomResponse();
         }
+        
+
 
     }
 }
