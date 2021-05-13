@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    ".NETCoreApp,Version=v3.1": {
       "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
@@ -5228,7 +5228,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    ".NETCoreApp,Version=v3.1": [
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.4",
       "SuppliersService.Business >= 1.0.0",
@@ -5236,45 +5236,44 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Caio\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
       "projectName": "SuppliersService.Api",
-      "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
-      "packagesPath": "C:\\Users\\Caio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Caio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.animaeducacao.com.br/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
-              "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj"
+            "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj"
             },
-            "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj": {
-              "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj"
+            "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj"
             }
           }
         }
@@ -5286,8 +5285,7 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "netcoreapp3.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
@@ -5318,7 +5316,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
