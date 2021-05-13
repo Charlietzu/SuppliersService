@@ -17,4 +17,8 @@
     <ProjectReference Include="..\SuppliersService.Data\SuppliersService.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>
