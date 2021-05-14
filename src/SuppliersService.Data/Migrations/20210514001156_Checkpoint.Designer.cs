@@ -10,8 +10,8 @@ using SuppliersService.Data.Context;
 namespace SuppliersService.Data.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20210512011702_Address-Fix")]
-    partial class AddressFix
+    [Migration("20210514001156_Checkpoint")]
+    partial class Checkpoint
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

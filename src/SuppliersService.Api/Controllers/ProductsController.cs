@@ -101,5 +101,37 @@ namespace SuppliersService.Api.Controllers
 
             return true;
         }
+
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> Update(Guid id, ProductViewModel productViewModel)
+        {
+            if (id != productViewModel.Id) return NotFound();
+
+            ProductViewModel productUpdate = await GetProduct(id);
+            productViewModel.Image = productUpdate.Image;
+
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            if(productViewModel.ImageUpload != null)
+            {
+                string nameImg = Guid.NewGuid() + "_" + productViewModel.Image;
+
+                if(!UploadFile(productViewModel.ImageUpload, nameImg))
+                {
+                    return CustomResponse(ModelState);
+                }
+
+                productUpdate.Image = nameImg;
+            }
+
+            productUpdate.Name = productViewModel.Name;
+            productUpdate.Description = productViewModel.Description;
+            productUpdate.Value = productViewModel.Value;
+            productUpdate.Active = productViewModel.Active;
+
+            await _productService.Update(_mapper.Map<Product>(productUpdate));
+
+            return CustomResponse(productViewModel);
+        }
     }
 }

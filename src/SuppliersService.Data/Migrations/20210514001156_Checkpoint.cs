@@ -2,7 +2,7 @@
 
 namespace SuppliersService.Data.Migrations
 {
-    public partial class TestProduct : Migration
+    public partial class Checkpoint : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
