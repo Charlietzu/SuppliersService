@@ -45,7 +45,7 @@ namespace SuppliersService.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<SupplierViewModel>> Create(SupplierViewModel supplierViewModel)
+        public async Task<ActionResult<SupplierViewModel>> Add(SupplierViewModel supplierViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 

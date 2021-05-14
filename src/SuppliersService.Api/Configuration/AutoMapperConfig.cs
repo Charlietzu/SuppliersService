@@ -10,7 +10,10 @@ namespace SuppliersService.Api.Configuration
         {
             CreateMap<Supplier, SupplierViewModel>().ReverseMap();
             CreateMap<Address, AddressViewModel>().ReverseMap();
-            CreateMap<Product, ProductViewModel>().ReverseMap();
+            CreateMap<ProductViewModel, Product>().ReverseMap();
+
+            CreateMap<Product, ProductViewModel>()
+                .ForMember(dest => dest.SupplierName, opt => opt.MapFrom(src => src.Supplier.Name));
         }
     }
 }

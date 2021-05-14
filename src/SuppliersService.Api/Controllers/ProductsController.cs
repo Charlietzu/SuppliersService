@@ -27,6 +27,11 @@ namespace SuppliersService.Api.Controllers
             _mapper = mapper;
         }
 
+        private async Task<ProductViewModel> GetProduct(Guid id)
+        {
+            return _mapper.Map<ProductViewModel>(await _productRepository.GetProductSupplier(id));
+        }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductViewModel>>> GetAll()
         {
@@ -37,7 +42,7 @@ namespace SuppliersService.Api.Controllers
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<ProductViewModel>> GetById(Guid id)
         {
-            ProductViewModel productViewModel = _mapper.Map<ProductViewModel>(await _productRepository.GetProductSupplier(id));
+            ProductViewModel productViewModel = await GetProduct(id);
 
             if (productViewModel == null) return NotFound();
 
@@ -47,7 +52,7 @@ namespace SuppliersService.Api.Controllers
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<ProductViewModel>> Delete(Guid id)
         {
-            ProductViewModel productViewModel = _mapper.Map<ProductViewModel>(await _productRepository.GetProductSupplier(id));
+            ProductViewModel productViewModel = await GetProduct(id);
 
             if (productViewModel == null) return NotFound();
 
@@ -57,7 +62,7 @@ namespace SuppliersService.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ProductViewModel>> Create(ProductViewModel productViewModel)
+        public async Task<ActionResult<ProductViewModel>> Add(ProductViewModel productViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
@@ -84,7 +89,7 @@ namespace SuppliersService.Api.Controllers
                 return false;
             }
 
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", nameImg);
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", nameImg);
 
             if (System.IO.File.Exists(filePath))
             {

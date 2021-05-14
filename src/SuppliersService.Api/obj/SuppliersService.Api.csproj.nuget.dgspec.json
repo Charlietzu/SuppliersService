@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj": {}
+    "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj": {
+    "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
         "projectName": "SuppliersService.Api",
-        "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Api\\obj\\",
+        "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\SuppliersService.Api.csproj",
+        "packagesPath": "C:\\Users\\Caio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Caio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -27,17 +28,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nuget.animaeducacao.com.br/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj"
+              "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
+                "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj"
               },
-              "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj"
+              "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj": {
+                "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj"
               }
             }
           }
@@ -50,7 +51,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -80,25 +86,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
+    "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj",
         "projectName": "SuppliersService.Business",
-        "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\obj\\",
+        "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj",
+        "packagesPath": "C:\\Users\\Caio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Caio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -107,11 +114,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nuget.animaeducacao.com.br/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -123,6 +130,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
@@ -144,25 +152,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj": {
+    "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj",
         "projectName": "SuppliersService.Data",
-        "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Data\\obj\\",
+        "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\SuppliersService.Data.csproj",
+        "packagesPath": "C:\\Users\\Caio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Caio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -171,14 +180,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nuget.animaeducacao.com.br/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj"
+              "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj": {
+                "projectPath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj"
               }
             }
           }
@@ -191,11 +200,8 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[8.1.1, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -205,12 +211,6 @@
               "version": "[3.1.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.4, )"
             }
@@ -230,7 +230,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

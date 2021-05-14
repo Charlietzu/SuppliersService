@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "e/YjzB3IFb6erTB6rMcy0TZ54qB0BRuA15UY+r7KegF5FSkkIoVJaWrpfLS02i4sgvFWJUw9OYizzWWR/vBrXw==",
+  "dgSpecHash": "MU6bW2EBI6l2R507fGV1FeD0vji76OWFXJJQghvmap/jwH+CFRXywiXVc2IlZ8Kz8uB56Lnzb3tRnPG47abY2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Documents\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj",
+  "projectFilePath": "C:\\Users\\Caio\\Documents\\projetos\\SuppliersService\\src\\SuppliersService.Business\\SuppliersService.Business.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DELL\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512"
+    "C:\\Users\\Caio\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\Caio\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512"
   ],
   "logs": []
 }
