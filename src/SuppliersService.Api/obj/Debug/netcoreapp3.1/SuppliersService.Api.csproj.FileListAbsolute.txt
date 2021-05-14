@@ -76,8 +76,6 @@ C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\D
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -86,9 +84,7 @@ C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\D
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
@@ -128,3 +124,12 @@ C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\D
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\Debug\netcoreapp3.1\SuppliersService.Api.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\Debug\netcoreapp3.1\SuppliersService.Api.pdb
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\Debug\netcoreapp3.1\SuppliersService.Api.genruntimeconfig.cache
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
