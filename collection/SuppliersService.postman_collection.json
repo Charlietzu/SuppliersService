@@ -399,6 +399,85 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": \"27c266ee-da6c-4f6f-b7f9-1c250482372d\",\r\n        \"supplierId\": \"228fe5bb-2e0c-4a68-bdbf-97a850775a4e\",\r\n        \"name\": \"C# book edition 2\",\r\n        \"description\": \"C# tutorial\",\r\n        \"image\": \"6429ba10-05cb-4340-ac5f-e66dbceaedb9_img.jpg\",\r\n        \"imageUpload\": null,\r\n        \"value\": 79,\r\n        \"registrationDate\": \"2021-05-13T22:03:52.8526572\",\r\n        \"active\": true,\r\n        \"supplierName\": \"Sleeping Co.\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/api/products/27c266ee-da6c-4f6f-b7f9-1c250482372d",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"27c266ee-da6c-4f6f-b7f9-1c250482372d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product Successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "   {\r\n        \"id\": \"27c266ee-da6c-4f6f-b7f9-1c250482372d\",\r\n        \"supplierId\": \"228fe5bb-2e0c-4a68-bdbf-97a850775a4e\",\r\n        \"name\": \"C# book edition 2\",\r\n        \"description\": \"C# tutorial\",\r\n        \"image\": \"6429ba10-05cb-4340-ac5f-e66dbceaedb9_img.jpg\",\r\n        \"imageUpload\": null,\r\n        \"value\": 79,\r\n        \"registrationDate\": \"2021-05-13T22:03:52.8526572\",\r\n        \"active\": true,\r\n        \"supplierName\": \"Sleeping Co.\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{serverUrl}}/api/products/27c266ee-da6c-4f6f-b7f9-1c250482372d",
+									"host": [
+										"{{serverUrl}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"27c266ee-da6c-4f6f-b7f9-1c250482372d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 14 May 2021 01:05:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "356"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"27c266ee-da6c-4f6f-b7f9-1c250482372d\",\n        \"supplierId\": \"228fe5bb-2e0c-4a68-bdbf-97a850775a4e\",\n        \"name\": \"C# book edition 2\",\n        \"description\": \"C# tutorial\",\n        \"image\": \"6429ba10-05cb-4340-ac5f-e66dbceaedb9_img.jpg\",\n        \"imageUpload\": null,\n        \"value\": 79,\n        \"registrationDate\": \"2021-05-13T22:03:52.8526572\",\n        \"active\": true,\n        \"supplierName\": \"Sleeping Co.\"\n    }\n}"
+						}
+					]
 				}
 			]
 		}
