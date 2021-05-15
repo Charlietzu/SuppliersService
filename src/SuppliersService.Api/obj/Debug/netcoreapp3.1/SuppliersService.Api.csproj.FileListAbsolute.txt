@@ -133,3 +133,10 @@ C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\D
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

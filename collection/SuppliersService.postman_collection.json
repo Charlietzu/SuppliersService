@@ -29,6 +29,16 @@
 				{
 					"name": "Get Supplier By Id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2MjEwNDYyMzgsImV4cCI6MTYyMTA1MzQzOCwiaWF0IjoxNjIxMDQ2MjM4LCJpc3MiOiJTdXBwbGllcnNTeXN0ZW0iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdCJ9.A9mGjQn0p7ILuzEQHg4zk9Se1ghDWc2n2tjfn_I_HHU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -476,6 +486,301 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"27c266ee-da6c-4f6f-b7f9-1c250482372d\",\n        \"supplierId\": \"228fe5bb-2e0c-4a68-bdbf-97a850775a4e\",\n        \"name\": \"C# book edition 2\",\n        \"description\": \"C# tutorial\",\n        \"image\": \"6429ba10-05cb-4340-ac5f-e66dbceaedb9_img.jpg\",\n        \"imageUpload\": null,\n        \"value\": 79,\n        \"registrationDate\": \"2021-05-13T22:03:52.8526572\",\n        \"active\": true,\n        \"supplierName\": \"Sleeping Co.\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth Controller",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Test@123\",\r\n    \"confirmPassword\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/api/auth/register",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register User Successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Test@123\",\r\n    \"confirmPassword\":\"Test@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{serverUrl}}/api/auth/register",
+									"host": [
+										"{{serverUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 15 May 2021 01:43:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": ".AspNetCore.Identity.Application=CfDJ8LY14EL9bZhJsszKB7LkxXP5_1QWVAMlZM1v5Hjl0EcjnLuHcWA-0jcJhC6flK1hEbb4HRgCflMwxbxYj_Iy_XcKop964-ujRdeMBtmgwqx7tJFQLeuiJnUQpmQkcQfde-yLKQQoMMThTKkTpI_gx83qLg2tP4nG1oxTqwUBabtLQk_4CJY42z8szNXdOeHeMVV5ZGEER6_-k4m9XnxZeB7DagPVaMAtOlWuvROmRus8BRjxPFTPL_uCRrpgwO9oBXUzhNmUQYs8pl29IzYUvpHIlF5jpCbDymfPPBsF0RhG0rxMhz_KULGKyaT5HTnBeJPTtksoOOQ4h7mnEtDyB58reTK3XjTkSI6oGnB0HmNYbBU6_Ac0dRnX7Qz1qwiF1meEzJ6uh9C_wiLJCPNjvQXwC5HYJySzNL-uhhDXTrBVW-U2409EilfgK1QCMV9hf93FXoiktanN943Ywq6hkGew4VUgy20R4bpbjhqd3oMeVqVA47MihA2r7IZmwYE1f6R4zO5tomFQKFIF9nvHtmnxc16ly-7KwJQixrZz4AeR9Uz2sIFFn42etRIzkeGfctv9VjIAsigQ8BeKFyVCu_Q; path=/; secure; samesite=lax; httponly"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"email\": \"test@gmail.com\",\n        \"password\": \"Test@123\",\n        \"confirmPassword\": \"Test@123\"\n    }\n}"
+						},
+						{
+							"name": "Register User Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Test@123\",\r\n    \"confirmPassword\":\"Test@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{serverUrl}}/api/auth/register",
+									"host": [
+										"{{serverUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 15 May 2021 01:45:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"error\": [\n        \"User name 'test@gmail.com' is already taken.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/api/auth/login",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login User Successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Test@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{serverUrl}}/api/auth/login",
+									"host": [
+										"{{serverUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 15 May 2021 01:44:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": ".AspNetCore.Identity.Application=CfDJ8LY14EL9bZhJsszKB7LkxXNZ5BgZAuqMzDtUAQKr97QEJXabumez8FulCOCnXd2sLWX9RHdTKggAFEBdFtysRyASy5A8AgYio4m2Z1OfZzI1dGQFGWdXH7AloYxHeVRrNzNXBfkLMqnch6PR70QbwcfNL_klW_pc0OS51Uo5-lJukq6RtDRWDlsTj4_d31JiEhWA52f2R7JVyPv4D8GtEGlv1JnrQwiwyO405Lnr64Nyp0lB6oV4WrpJUcHSTRq7-WsPkM_biR3YoC2an-VMLsvJZFqVNUiZJ968m9MHd0PWL3yXP4BYHTIHbgmGBuyuM6pgIPzYiC8LYMS1IT-s1w4tBRoxsxRdxYL9hZGS2GCDzklwnCM0rpCegpN0eJwu1mpvqJ-57Ay054mcg8WePEcnKqKAMpaV1ctIYo7IYBgmrIUXzMyovDEmc6MlpHSy7-Xh00Rd3uMofS7umWnoP8yEpUz_faL3hIn7f6bBitmj45mLmTQm6jUl38sotX-rwjw8Ovpz8iEO-5gyjtMxBhcJlf1URhGwwpnceNJV-5u0G325veq0YGXKMOXAs5fKf8PWzIoyWi7Wxzl_h7kP_AygF-7GnJXuB_3uPbHeyM5m; path=/; secure; samesite=lax; httponly"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"email\": \"test@gmail.com\",\n        \"password\": \"Test@123\"\n    }\n}"
+						},
+						{
+							"name": "Login User Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Test@1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{serverUrl}}/api/auth/login",
+									"host": [
+										"{{serverUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 15 May 2021 01:46:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"error\": [\n        \"Invalid user or password\"\n    ]\n}"
 						}
 					]
 				}

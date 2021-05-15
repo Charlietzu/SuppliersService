@@ -1,7 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using SuppliersService.Api.Extensions;
 using SuppliersService.Api.ViewModels;
 using SuppliersService.Business.Interfaces;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SuppliersService.Api.Controllers
@@ -12,10 +18,15 @@ namespace SuppliersService.Api.Controllers
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
-        public AuthController(INotificator notificator, SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager) : base(notificator)
+        private readonly AppSettings _appSettings;
+        public AuthController(INotificator notificator, 
+               SignInManager<IdentityUser> signInManager, 
+               UserManager<IdentityUser> userManager, 
+               IOptions<AppSettings> appSettings) : base(notificator)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _appSettings = appSettings.Value;
         }
 
         [HttpPost("register")]
@@ -35,7 +46,7 @@ namespace SuppliersService.Api.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, false);
-                return CustomResponse(registerUser);
+                return CustomResponse(BuildJwt());
             }
 
             foreach (IdentityError error in result.Errors)
@@ -55,7 +66,7 @@ namespace SuppliersService.Api.Controllers
 
             if (result.Succeeded)
             {
-                return CustomResponse(loginUser);
+                return CustomResponse(BuildJwt());
             }
 
             if (result.IsLockedOut)
@@ -66,6 +77,24 @@ namespace SuppliersService.Api.Controllers
 
             NotifyError("Invalid user or password");
             return CustomResponse(loginUser);
+        }
+
+        private string BuildJwt()
+        {
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            byte[] key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+
+            SecurityToken token = tokenHandler.CreateToken(new SecurityTokenDescriptor
+            {
+                Issuer = _appSettings.Issuer,
+                Audience = _appSettings.Audience,
+                Expires = DateTime.UtcNow.AddHours(_appSettings.ExpirationHours),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), 
+                                                            SecurityAlgorithms.HmacSha256Signature)
+            });
+
+            string encodedToken = tokenHandler.WriteToken(token);
+            return encodedToken;
         }
     }
 }
