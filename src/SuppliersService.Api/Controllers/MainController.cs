@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Notifications;
+using System;
 using System.Linq;
 
 namespace SuppliersService.Api.Controllers
@@ -10,10 +11,21 @@ namespace SuppliersService.Api.Controllers
     public abstract class MainController : ControllerBase
     {
         private readonly INotificator _notificator;
+        public readonly IUser AppUser;
+        
+        protected Guid UserId { get; set; }
+        protected bool UserAuthenticated { get; set; }
 
-        protected MainController(INotificator notificator)
+        protected MainController(INotificator notificator, IUser appUser)
         {
             _notificator = notificator;
+            AppUser = appUser;
+
+            if (appUser.IsAuthenticated())
+            {
+                UserId = appUser.GetUserId();
+                UserAuthenticated = true;
+            }
         }
 
         protected ActionResult CustomResponse(ModelStateDictionary modelState)

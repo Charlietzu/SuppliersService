@@ -23,7 +23,8 @@ namespace SuppliersService.Api.Controllers
         public SuppliersController(ISupplierRepository supplierRepository,
                                    ISupplierService supplierService,
                                    IMapper mapper,
-                                   INotificator notificator) : base(notificator)
+                                   INotificator notificator,
+                                   IUser user) : base(notificator, user)
         {
             _supplierRepository = supplierRepository;
             _supplierService = supplierService;

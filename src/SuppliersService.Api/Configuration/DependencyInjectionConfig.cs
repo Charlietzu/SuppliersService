@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using SuppliersService.Api.Extensions;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Notifications;
 using SuppliersService.Business.Services;
@@ -18,6 +20,9 @@ namespace SuppliersService.Api.Configuration
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<INotificator, Notificator>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IUser, AspNetUser>();
 
             return services;
         }

@@ -22,7 +22,8 @@ namespace SuppliersService.Api.Controllers
         public AddressesController(IAddressRepository addressRepository,
                                    ISupplierService supplierService,
                                    IMapper mapper,
-                                   INotificator notificator) : base(notificator)
+                                   INotificator notificator,
+                                   IUser user) : base(notificator, user)
         {
             _addressRepository = addressRepository;
             _supplierService = supplierService;
