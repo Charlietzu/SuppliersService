@@ -17,6 +17,27 @@ namespace SuppliersService.Api.Configuration
                 options.SuppressModelStateInvalidFilter = true;
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Development", builder =>
+                {
+                    builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+                });
+
+                options.AddPolicy("Production", builder =>
+                {
+                    builder
+                    .WithMethods("GET")
+                    .WithOrigins("http://suppliers-service.io")
+                    .SetIsOriginAllowedToAllowWildcardSubdomains()
+                    .AllowAnyHeader();
+                });
+            });
+
             return services;
         }
 

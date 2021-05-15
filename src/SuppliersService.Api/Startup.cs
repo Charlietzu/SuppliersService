@@ -41,7 +41,12 @@ namespace SuppliersService.Api
         {
             if (env.IsDevelopment())
             {
+                //CORS must always come before the UseMvcConfiguration
+                app.UseCors("Development");
                 app.UseDeveloperExceptionPage();
+            } else
+            {
+                app.UseCors("Production");
             }
 
             //The UseAuthentication must always come before the UseMvcConfiguration
