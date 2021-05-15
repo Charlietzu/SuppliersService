@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace SuppliersService.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [Authorize]
     public class ProductsController : MainController
     {
