@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SuppliersService.Api.Extensions;
 using SuppliersService.Api.ViewModels;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
@@ -29,7 +30,6 @@ namespace SuppliersService.Api.Controllers
             _mapper = mapper;
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SupplierViewModel>>> GetAll()
         {
@@ -47,6 +47,7 @@ namespace SuppliersService.Api.Controllers
             return Ok(supplierViewModel);
         }
 
+        [ClaimsAuthorize("Supplier","Add")]
         [HttpPost]
         public async Task<ActionResult<SupplierViewModel>> Add(SupplierViewModel supplierViewModel)
         {
@@ -58,6 +59,7 @@ namespace SuppliersService.Api.Controllers
             return CustomResponse(supplierViewModel);
         }
 
+        [ClaimsAuthorize("Supplier", "Update")]
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<SupplierViewModel>> Update(Guid id, SupplierViewModel supplierViewModel)
         {
@@ -70,6 +72,7 @@ namespace SuppliersService.Api.Controllers
             return CustomResponse(ModelState);
         }
 
+        [ClaimsAuthorize("Supplier", "Delete")]
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<SupplierViewModel>> Delete(Guid id)
         {
@@ -81,8 +84,5 @@ namespace SuppliersService.Api.Controllers
 
             return CustomResponse();
         }
-        
-
-
     }
 }

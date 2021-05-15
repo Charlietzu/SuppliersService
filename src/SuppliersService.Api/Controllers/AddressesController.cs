@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SuppliersService.Api.Extensions;
 using SuppliersService.Api.ViewModels;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
@@ -10,6 +12,7 @@ namespace SuppliersService.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AddressesController : MainController
     {
         private readonly IAddressRepository _addressRepository;
@@ -37,6 +40,7 @@ namespace SuppliersService.Api.Controllers
             return Ok(addressViewModel);
         }
 
+        [ClaimsAuthorize("Supplier", "Update")]
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<AddressViewModel>> Update(Guid id, AddressViewModel addressViewModel)
         {
