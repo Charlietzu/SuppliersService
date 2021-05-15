@@ -7,6 +7,7 @@ using SuppliersService.Api.ViewModels;
 using SuppliersService.Business.Interfaces;
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,7 +81,7 @@ namespace SuppliersService.Api.Controllers
             return CustomResponse(loginUser);
         }
 
-        private async Task<string> BuildJwt(string email)
+        private async Task<LoginResponseViewModel> BuildJwt(string email)
         {
             IdentityUser user = await _userManager.FindByEmailAsync(email);
             var claims = await _userManager.GetClaimsAsync(user);
@@ -114,7 +115,24 @@ namespace SuppliersService.Api.Controllers
             });
 
             string encodedToken = tokenHandler.WriteToken(token);
-            return encodedToken;
+
+            LoginResponseViewModel loginResponse = new LoginResponseViewModel
+            {
+                AccessToken = encodedToken,
+                ExpiresIn = TimeSpan.FromHours(_appSettings.ExpirationHours).TotalSeconds,
+                UserToken = new UserTokenViewModel
+                {
+                    Id = user.Id,
+                    Email = user.Email,
+                    Claims = claims.Select(c => new ClaimViewModel
+                    {
+                        Type = c.Type,
+                        Value = c.Value
+                    })
+                }
+            };
+
+            return loginResponse;
         }
 
         private static long ToUnixEpochDate(DateTime date)

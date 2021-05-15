@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SuppliersService.Api.Extensions;
 using SuppliersService.Api.ViewModels;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
@@ -12,6 +14,7 @@ namespace SuppliersService.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProductsController : MainController
     {
         private readonly IProductRepository _productRepository;
@@ -49,6 +52,7 @@ namespace SuppliersService.Api.Controllers
             return Ok(productViewModel);
         }
 
+        [ClaimsAuthorize("Supplier", "Add")]
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<ProductViewModel>> Delete(Guid id)
         {
@@ -61,6 +65,7 @@ namespace SuppliersService.Api.Controllers
             return CustomResponse(productViewModel);
         }
 
+        [ClaimsAuthorize("Supplier", "Add")]
         [HttpPost]
         public async Task<ActionResult<ProductViewModel>> Add(ProductViewModel productViewModel)
         {
@@ -102,6 +107,7 @@ namespace SuppliersService.Api.Controllers
             return true;
         }
 
+        [ClaimsAuthorize("Supplier", "Add")]
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> Update(Guid id, ProductViewModel productViewModel)
         {
