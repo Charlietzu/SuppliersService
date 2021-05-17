@@ -31,3 +31,4 @@ C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\ob
 C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.dll
 C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.pdb
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csprojAssemblyReference.cache
