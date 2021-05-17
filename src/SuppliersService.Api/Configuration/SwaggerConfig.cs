@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SuppliersService.Api.Configuration
 {
@@ -46,6 +47,8 @@ namespace SuppliersService.Api.Configuration
 
         public static IApplicationBuilder UseSwaggerConfig(this IApplicationBuilder app, IApiVersionDescriptionProvider provider)
         {
+            //Uncomment the line below to activate the restriction on the use of the Swagger.
+            //app.UseMiddleware<SwaggerAuthorizedMiddleware>();
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
@@ -62,6 +65,7 @@ namespace SuppliersService.Api.Configuration
     public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
     {
         private readonly IApiVersionDescriptionProvider provider;
+        private const string licenseUri = "https://opensource.org/licenses/MIT";
 
         public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider) => this.provider = provider;
 
@@ -81,8 +85,8 @@ namespace SuppliersService.Api.Configuration
                 Version = description.ToString(),
                 Description = "RESTful Web API using .NET Core 3.1",
                 Contact = new OpenApiContact() { Name = "Caio César", Email = "caiocesarsilva08@gmail.com" },
-                TermsOfService = new System.Uri("https://opensource.org/licenses/MIT"),
-                License = new OpenApiLicense() { Name = "MIT", Url = new System.Uri("https://opensource.org/licenses/MIT") }
+                TermsOfService = new System.Uri(licenseUri),
+                License = new OpenApiLicense() { Name = "MIT", Url = new System.Uri(licenseUri) }
             };
 
             if (description.IsDeprecated)
@@ -118,6 +122,27 @@ namespace SuppliersService.Api.Configuration
 
                 parameter.Required |= description.IsRequired;
             }
+        }
+    }
+
+    public class SwaggerAuthorizedMiddleware
+    {
+        private readonly RequestDelegate _next;
+
+        public SwaggerAuthorizedMiddleware(RequestDelegate next)
+        {
+            _next = next;
+        }
+
+        public async Task Invoke(HttpContext context)
+        {
+            if (context.Request.Path.StartsWithSegments("/swagger") && !context.User.Identity.IsAuthenticated)
+            {
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                return;
+            }
+
+            await _next.Invoke(context);
         }
     }
 }
