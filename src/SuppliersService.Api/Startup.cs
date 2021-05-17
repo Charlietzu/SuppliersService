@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,18 +34,21 @@ namespace SuppliersService.Api
 
             services.WebApiConfig();
 
+            services.AddSwaggerConfig();
+
             services.ResolveDependencies();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
             if (env.IsDevelopment())
             {
                 //CORS must always come before the UseMvcConfiguration
                 app.UseCors("Development");
                 app.UseDeveloperExceptionPage();
-            } else
+            }
+            else
             {
                 app.UseCors("Production");
             }
@@ -53,6 +57,8 @@ namespace SuppliersService.Api
             app.UseAuthentication();
 
             app.UseMvcConfiguration();
+
+            app.UseSwaggerConfig(provider);
         }
     }
 }

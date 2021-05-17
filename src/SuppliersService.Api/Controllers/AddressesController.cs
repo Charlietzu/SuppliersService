@@ -30,7 +30,6 @@ namespace SuppliersService.Api.Controllers
             _mapper = mapper;
         }
 
-
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<AddressViewModel>> GetById(Guid id)
         {
@@ -48,7 +47,7 @@ namespace SuppliersService.Api.Controllers
             if (id != addressViewModel.Id) return BadRequest();
 
             if (!ModelState.IsValid) return CustomResponse(ModelState);
-             
+
             await _supplierService.UpdateAddress(_mapper.Map<Address>(addressViewModel));
 
             return CustomResponse(addressViewModel);

@@ -29,7 +29,7 @@ namespace SuppliersService.Api.Extensions
 
         public bool IsAuthenticated()
         {
-            return _acessor.HttpContext.User.Identity.IsAuthenticated;  
+            return _acessor.HttpContext.User.Identity.IsAuthenticated;
         }
 
         public bool IsInRole(string role)
@@ -47,7 +47,7 @@ namespace SuppliersService.Api.Extensions
     {
         public static string GetUserId(this ClaimsPrincipal principal)
         {
-            if(principal == null)
+            if (principal == null)
             {
                 throw new ArgumentException(nameof(principal));
             }
@@ -58,7 +58,7 @@ namespace SuppliersService.Api.Extensions
 
         public static string GetUserEmail(this ClaimsPrincipal principal)
         {
-            if(principal == null)
+            if (principal == null)
             {
                 throw new ArgumentException(nameof(principal));
             }

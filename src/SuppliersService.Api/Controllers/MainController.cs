@@ -12,7 +12,7 @@ namespace SuppliersService.Api.Controllers
     {
         private readonly INotificator _notificator;
         public readonly IUser AppUser;
-        
+
         protected Guid UserId { get; set; }
         protected bool UserAuthenticated { get; set; }
 

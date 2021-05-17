@@ -1,8 +1,8 @@
-﻿using SuppliersService.Business.Interfaces;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
 using SuppliersService.Business.Notifications;
-using FluentValidation;
-using FluentValidation.Results;
 
 namespace SuppliersService.Business.Services
 {
@@ -32,7 +32,7 @@ namespace SuppliersService.Business.Services
         {
             var validator = validation.Validate(entity);
 
-            if(validator.IsValid) return true;
+            if (validator.IsValid) return true;
 
             Notificate(validator);
 

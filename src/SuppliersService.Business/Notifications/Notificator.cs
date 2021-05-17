@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using SuppliersService.Business.Interfaces;
+using System.Collections.Generic;
 using System.Linq;
-using SuppliersService.Business.Interfaces;
 
 namespace SuppliersService.Business.Notifications
 {

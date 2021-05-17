@@ -22,4 +22,12 @@ C:\Users\DELL\Documents\SuppliersService\src\SuppliersService.Business\obj\Debug
 C:\Users\DELL\Documents\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Documents\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.dll
 C:\Users\DELL\Documents\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.pdb
-C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csprojAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.deps.json
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.dll
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\bin\Debug\netcoreapp3.1\SuppliersService.Business.pdb
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csprojAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.AssemblyInfo.cs
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.dll
+C:\Users\DELL\Documents\GitHub\SuppliersService\src\SuppliersService.Business\obj\Debug\netcoreapp3.1\SuppliersService.Business.pdb

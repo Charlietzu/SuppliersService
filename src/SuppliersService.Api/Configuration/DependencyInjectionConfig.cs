@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using SuppliersService.Api.Extensions;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Notifications;
 using SuppliersService.Business.Services;
 using SuppliersService.Data.Context;
 using SuppliersService.Data.Repository;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace SuppliersService.Api.Configuration
 {
@@ -23,6 +25,8 @@ namespace SuppliersService.Api.Configuration
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IUser, AspNetUser>();
+
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
             return services;
         }

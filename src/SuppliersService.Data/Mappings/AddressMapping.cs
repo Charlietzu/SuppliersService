@@ -1,6 +1,6 @@
-﻿using SuppliersService.Business.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SuppliersService.Business.Models;
 
 namespace SuppliersService.Data.Mappings
 {

@@ -34,13 +34,13 @@ namespace SuppliersService.Api.Extensions
 
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            if(!context.HttpContext.User.Identity.IsAuthenticated)
+            if (!context.HttpContext.User.Identity.IsAuthenticated)
             {
                 context.Result = new StatusCodeResult(401);
                 return;
             }
 
-            if(!CustomAuthorization.ValidateUserClaims(context.HttpContext, _claim.Type, _claim.Value))
+            if (!CustomAuthorization.ValidateUserClaims(context.HttpContext, _claim.Type, _claim.Value))
             {
                 context.Result = new StatusCodeResult(403);
             }

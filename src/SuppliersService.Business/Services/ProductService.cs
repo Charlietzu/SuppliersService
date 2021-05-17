@@ -1,8 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using SuppliersService.Business.Interfaces;
+﻿using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
 using SuppliersService.Business.Models.Validations;
+using System;
+using System.Threading.Tasks;
 
 namespace SuppliersService.Business.Services
 {

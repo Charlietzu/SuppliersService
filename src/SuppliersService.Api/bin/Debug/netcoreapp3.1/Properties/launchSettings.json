@@ -9,12 +9,20 @@
     }
   },
   "profiles": {
-    "IIS Express": {
+    "IIS Express - Dev": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "api/suppliers",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express - Prod": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/suppliers",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
       }
     },
     "SuppliersService.Api": {

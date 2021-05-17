@@ -1,5 +1,5 @@
-﻿using SuppliersService.Business.Models.Validations.Documents;
-using FluentValidation;
+﻿using FluentValidation;
+using SuppliersService.Business.Models.Validations.Documents;
 
 namespace SuppliersService.Business.Models.Validations
 {
@@ -16,7 +16,7 @@ namespace SuppliersService.Business.Models.Validations
             {
                 RuleFor(f => f.Document.Length).Equal(CpfValidation.CpfLength)
                     .WithMessage("The Document field must be {ComparisonValue} characters and {PropertyValue} has been provided.");
-                RuleFor(f=> CpfValidation.Validate(f.Document)).Equal(true)
+                RuleFor(f => CpfValidation.Validate(f.Document)).Equal(true)
                     .WithMessage("The document provided is invalid.");
             });
 

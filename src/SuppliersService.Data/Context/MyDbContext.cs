@@ -1,15 +1,17 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SuppliersService.Business.Models;
+using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using SuppliersService.Business.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace SuppliersService.Data.Context
 {
     public class MyDbContext : DbContext
     {
-        public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
+        public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
+        {
+        }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Address> Addresses { get; set; }

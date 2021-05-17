@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
 using SuppliersService.Data.Context;
-using Microsoft.EntityFrameworkCore;
+using System;
+using System.Threading.Tasks;
 
 namespace SuppliersService.Data.Repository
 {

@@ -20,6 +20,7 @@ namespace SuppliersService.Api.Controllers
         private readonly IProductRepository _productRepository;
         private readonly IProductService _productService;
         private readonly IMapper _mapper;
+
         public ProductsController(IProductRepository productRepository,
                                   IProductService productService,
                                   IMapper mapper,
@@ -39,7 +40,7 @@ namespace SuppliersService.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductViewModel>>> GetAll()
         {
-            IEnumerable <ProductViewModel> products = _mapper.Map<IEnumerable<ProductViewModel>>(await _productRepository.GetProductsSuppliers());
+            IEnumerable<ProductViewModel> products = _mapper.Map<IEnumerable<ProductViewModel>>(await _productRepository.GetProductsSuppliers());
             return Ok(products);
         }
 
@@ -74,7 +75,7 @@ namespace SuppliersService.Api.Controllers
 
             string nameImg = Guid.NewGuid() + "_" + productViewModel.Image;
 
-            if(!UploadFile(productViewModel.ImageUpload, nameImg))
+            if (!UploadFile(productViewModel.ImageUpload, nameImg))
             {
                 return CustomResponse(productViewModel);
             }
@@ -89,7 +90,7 @@ namespace SuppliersService.Api.Controllers
         {
             byte[] imageDataByteArray = Convert.FromBase64String(file);
 
-            if(string.IsNullOrEmpty(file))
+            if (string.IsNullOrEmpty(file))
             {
                 NotifyError("Please provide an image for this product");
                 return false;
@@ -119,11 +120,11 @@ namespace SuppliersService.Api.Controllers
 
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            if(productViewModel.ImageUpload != null)
+            if (productViewModel.ImageUpload != null)
             {
                 string nameImg = Guid.NewGuid() + "_" + productViewModel.Image;
 
-                if(!UploadFile(productViewModel.ImageUpload, nameImg))
+                if (!UploadFile(productViewModel.ImageUpload, nameImg))
                 {
                     return CustomResponse(ModelState);
                 }

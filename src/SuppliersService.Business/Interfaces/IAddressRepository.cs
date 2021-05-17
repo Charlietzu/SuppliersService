@@ -1,6 +1,6 @@
-﻿using System;
+﻿using SuppliersService.Business.Models;
+using System;
 using System.Threading.Tasks;
-using SuppliersService.Business.Models;
 
 namespace SuppliersService.Business.Interfaces
 {

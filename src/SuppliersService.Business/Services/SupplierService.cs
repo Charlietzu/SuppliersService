@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using SuppliersService.Business.Interfaces;
+﻿using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
 using SuppliersService.Business.Models.Validations;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SuppliersService.Business.Services
 {
@@ -12,7 +12,7 @@ namespace SuppliersService.Business.Services
         private readonly ISupplierRepository _supplierRepository;
         private readonly IAddressRepository _addressRepository;
 
-        public SupplierService(ISupplierRepository supplierRepository, 
+        public SupplierService(ISupplierRepository supplierRepository,
                                  IAddressRepository addressRepository,
                                  INotificator notificator) : base(notificator)
         {
@@ -22,7 +22,7 @@ namespace SuppliersService.Business.Services
 
         public async Task<bool> Create(Supplier supplier)
         {
-            if (!ExecuteValidation(new SupplierValidation(), supplier) 
+            if (!ExecuteValidation(new SupplierValidation(), supplier)
                 || !ExecuteValidation(new AddressValidation(), supplier.Address)) return false;
 
             if (_supplierRepository.Get(f => f.Document == supplier.Document).Result.Any())

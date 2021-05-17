@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using SuppliersService.Business.Interfaces;
 using SuppliersService.Business.Models;
 using SuppliersService.Data.Context;
-using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SuppliersService.Data.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        public ProductRepository(MyDbContext context) : base(context) { }
+        public ProductRepository(MyDbContext context) : base(context)
+        {
+        }
 
         public async Task<Product> GetProductSupplier(Guid id)
         {

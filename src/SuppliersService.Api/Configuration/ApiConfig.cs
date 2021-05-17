@@ -19,7 +19,7 @@ namespace SuppliersService.Api.Configuration
                 options.ReportApiVersions = true;
             });
 
-            services.AddVersionedApiExplorer(options => 
+            services.AddVersionedApiExplorer(options =>
             {
                 options.GroupNameFormat = "'v'VVV";
                 options.SubstituteApiVersionInUrl = true;
@@ -28,27 +28,6 @@ namespace SuppliersService.Api.Configuration
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;
-            });
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("Development", builder =>
-                {
-                    builder
-                    .AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials();
-                });
-
-                options.AddPolicy("Production", builder =>
-                {
-                    builder
-                    .WithMethods("GET")
-                    .WithOrigins("http://suppliers-service.io")
-                    .SetIsOriginAllowedToAllowWildcardSubdomains()
-                    .AllowAnyHeader();
-                });
             });
 
             return services;

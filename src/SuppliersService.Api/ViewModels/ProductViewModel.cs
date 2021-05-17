@@ -18,6 +18,7 @@ namespace SuppliersService.Api.ViewModels
         [Required(ErrorMessage = "The field {0} is required")]
         [StringLength(1000, ErrorMessage = "The field {0} must be between {2} and {1} characters", MinimumLength = 2)]
         public string Description { get; set; }
+
         public string Image { get; set; }
         public string ImageUpload { get; set; }
 
@@ -26,6 +27,7 @@ namespace SuppliersService.Api.ViewModels
 
         [ScaffoldColumn(false)]
         public DateTime RegistrationDate { get; set; }
+
         public bool Active { get; set; }
 
         [ScaffoldColumn(false)]

@@ -7,7 +7,6 @@ namespace SuppliersService.Api.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
         }
     }
 }

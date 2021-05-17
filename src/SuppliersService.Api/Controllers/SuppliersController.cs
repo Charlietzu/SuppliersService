@@ -48,7 +48,7 @@ namespace SuppliersService.Api.Controllers
             return Ok(supplierViewModel);
         }
 
-        [ClaimsAuthorize("Supplier","Add")]
+        [ClaimsAuthorize("Supplier", "Add")]
         [HttpPost]
         public async Task<ActionResult<SupplierViewModel>> Add(SupplierViewModel supplierViewModel)
         {
