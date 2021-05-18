@@ -1,0 +1,36 @@
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace SuppliersService.Api.Extensions
+{
+    public class SqlServerHealthCheck : IHealthCheck
+    {
+        private readonly string _connection;
+        public SqlServerHealthCheck(string connection)
+        {
+            _connection = connection;
+        }
+
+        public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                using SqlConnection connection = new SqlConnection(_connection);
+                await connection.OpenAsync(cancellationToken);
+
+                SqlCommand command = connection.CreateCommand();
+
+                command.CommandText = "SELECT COUNT(ID) FROM PRODUCTS";
+
+                return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) > 0 ? HealthCheckResult.Healthy() : HealthCheckResult.Unhealthy();
+            }
+            catch (Exception)
+            {
+                return HealthCheckResult.Unhealthy();
+            }
+        }
+    }
+}

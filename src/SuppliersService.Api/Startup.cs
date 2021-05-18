@@ -34,7 +34,7 @@ namespace SuppliersService.Api
 
             services.AddSwaggerConfig();
 
-            services.AddLoggingConfiguration();
+            services.AddLoggingConfiguration(Configuration);
 
             services.ResolveDependencies();
         }

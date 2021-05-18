@@ -53,11 +53,23 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AspNetCore.HealthChecks.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "AspNetCore.HealthChecks.UI": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Elmah.Io.AspNetCore": {
+              "target": "Package",
+              "version": "[3.11.17, )"
+            },
+            "Elmah.Io.AspNetCore.HealthChecks": {
               "target": "Package",
               "version": "[3.11.17, )"
             },
