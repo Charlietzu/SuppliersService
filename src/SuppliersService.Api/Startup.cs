@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SuppliersService.Api.Configuration;
+using SuppliersService.Api.Extensions;
 using SuppliersService.Data.Context;
 
 namespace SuppliersService.Api
@@ -23,10 +24,7 @@ namespace SuppliersService.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MyDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
+            services.AddDbContext<MyDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentityConfiguration(Configuration);
 
@@ -35,6 +33,8 @@ namespace SuppliersService.Api
             services.WebApiConfig();
 
             services.AddSwaggerConfig();
+
+            services.AddLoggingConfiguration();
 
             services.ResolveDependencies();
         }
@@ -56,9 +56,13 @@ namespace SuppliersService.Api
             //The UseAuthentication must always come before the UseMvcConfiguration
             app.UseAuthentication();
 
+            app.UseMiddleware<ExceptionMiddleware>();
+
             app.UseMvcConfiguration();
 
             app.UseSwaggerConfig(provider);
+
+            app.UseLoggingConfiguration();
         }
     }
 }

@@ -231,3 +231,7 @@ C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\D
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\obj\Debug\netcoreapp3.1\SuppliersService.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Elmah.Io.AspNetCore.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Elmah.Io.Client.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Microsoft.Rest.ClientRuntime.dll
+C:\Users\Caio\Documents\projetos\SuppliersService\src\SuppliersService.Api\bin\Debug\netcoreapp3.1\Elmah.Io.Extensions.Logging.dll

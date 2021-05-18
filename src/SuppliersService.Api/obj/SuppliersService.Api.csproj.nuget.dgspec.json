@@ -57,6 +57,14 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Elmah.Io.AspNetCore": {
+              "target": "Package",
+              "version": "[3.11.17, )"
+            },
+            "Elmah.Io.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.10.15, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.4, )"
